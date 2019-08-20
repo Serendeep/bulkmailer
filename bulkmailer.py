@@ -9,7 +9,7 @@ print ("Please make sure you have allowed less secure apps")
 print ("If you haven't please go to this link https://myaccount.google.com/lesssecureapps")
 sender_email = input("Type your email and press enter: ")
 password = input("Type your password and press enter: ")
-wb = xl.load_workbook(r'<replace with the path of your excel sheet>')
+wb = xl.load_workbook(r'C:/Users/seren/Desktop/test.xlsx')
 sheet1 = wb['Sheet1']
 Subject = 'Test'
 
@@ -41,9 +41,6 @@ Hello {},
         message = msg.as_string()
         server.sendmail(sender_email, emails[i], message)
         print('Mail sent to', emails[i])
+    server.quit()   
 
-server.quit() #temporarily fails will fix later
 print('All emails sent successfully!')
-
-
- 
