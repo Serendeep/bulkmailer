@@ -9,7 +9,7 @@ print ("Please make sure you have allowed less secure apps")
 print ("If you haven't please go to this link https://myaccount.google.com/lesssecureapps")
 sender_email = input("Type your email and press enter: ")
 password = input("Type your password and press enter: ")
-wb = xl.load_workbook(r'C:/Users/seren/Desktop/test.xlsx')
+wb = xl.load_workbook(r'<Replace with path of your excel sheet>')
 sheet1 = wb['Sheet1']
 Subject = 'Test'
 
