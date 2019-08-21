@@ -11,7 +11,7 @@ sender_email = input("Type your email and press enter: ")
 password = input("Type your password and press enter: ")
 wb = xl.load_workbook(input(r'Paste path of your Excel Sheet: '))
 sheet1 = wb['Sheet1']
-Subject = 'Test'
+Subject = input("Enter your Subject: ")
 
 names = []
 emails = []
@@ -33,9 +33,8 @@ with smtplib.SMTP(smtp_server, port) as server:
         msg['To'] = names[i]
         msg['Subject'] = Subject
         text = '''
-Hello {},
-    This is bulk mailing test!
-    {}
+         <Replace with body of your mail>
+
 '''     .format(names[i],emails[i])
         msg.attach(MIMEText(text, 'plain'))
         message = msg.as_string()
